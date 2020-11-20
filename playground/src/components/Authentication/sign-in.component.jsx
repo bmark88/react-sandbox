@@ -10,12 +10,16 @@ const SignUp = () => {
     setSignUp({...signup, [e.target.id]: e.target.value})
   };
 
-  const { email, password } = signup;
+  const handleClick = (e) => {
+    localStorage.setItem('loggedInAs', email1);
+  };
+
+  const { email1, password1 } = signup;
   
   return (
     <>
       <h2>Sign In Form</h2>
-      <form id='sign-in-form' data-ms-form="login">
+      <form id='sign-in-form' data-ms-form="login" onSubmit={(e) => e.preventDefault()}>
         <label htmlFor='email'>
           Email:
         </label>
@@ -24,7 +28,7 @@ const SignUp = () => {
           id="email1"
           name="email" 
           onChange={handleChange}
-          value={email}
+          value={email1}
           required
           data-ms-member="email"
         />
@@ -36,13 +40,14 @@ const SignUp = () => {
           id="password1"
           name="password" 
           onChange={handleChange}
-          value={password}
+          value={password1}
           required
           data-ms-member="password"
         />
         <button 
           type='submit' 
           data-ms-form="login"
+          onClick={handleClick}
         >
           Submit Login Information
         </button>

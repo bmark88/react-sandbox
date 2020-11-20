@@ -12,6 +12,10 @@ const Register = () => {
     setRegister({...register, [e.target.id]: e.target.value})
   };
 
+  const handleClick = (e) => {
+    localStorage.setItem('loggedInAs', email);
+  };
+
   const { firstName, lastName, email, password } = register;
   
   return (
@@ -75,8 +79,8 @@ const Register = () => {
           data-ms-member="password"
         />
         <button 
-          data-ms-membership="5fb7fa582250ca0004b336e4"
-          type='submit' 
+          onClick={handleClick}
+          type='submit'
         >
           Submit Registration Information
         </button>
