@@ -12,11 +12,6 @@ const Register = () => {
     setRegister({...register, [e.target.id]: e.target.value})
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-  };
-
   const { firstName, lastName, email, password } = register;
   
   return (
@@ -79,15 +74,13 @@ const Register = () => {
           required
           data-ms-member="password"
         />
+        <button 
+          data-ms-membership="5fb7fa582250ca0004b336e4"
+          type='submit' 
+        >
+          Submit Registration Information
+        </button>
       </form>
-      <button 
-        data-ms-membership="5fb7fa582250ca0004b336e4"
-        type='submit' 
-        form='registration-form'
-        onSubmit={handleSubmit}
-      >
-        Submit Registration Information
-      </button>
     </>
   );
 };

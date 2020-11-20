@@ -40,15 +40,14 @@ const SignUp = () => {
           required
           data-ms-member="password"
         />
-        </form>
         <button 
           type='submit' 
-          form='sign-in-form'
           data-ms-form="login"
         >
           Submit Login Information
         </button>
-        <a href='#/ms/password-reset'>Forgot Password?</a>
+      </form>
+      <a href='#/ms/password-reset'>Forgot Password?</a>
     </>
   );
 };
