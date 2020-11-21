@@ -8,12 +8,16 @@ import './navbar.styles.scss';
 const Navbar = () => {
   const [currentItem, setCurrentItem] = useState('');
   const [active, setActive] = useState(false);
+  const [theme, setTheme] = useState('day');
   
   const listItems = ['Home', 'Guides', 'Product manuals', 'Reference', 'Articles'];
 
   const handleClick = (e) => {
     if (e.target.id === 'dark-mode') {
       setActive(!active)
+
+      setTheme(theme === 'day' ? 'night' : 'day');
+      window.localStorage.setItem('theme', theme);
     } else {
       setCurrentItem(e.target.innerText)
     }

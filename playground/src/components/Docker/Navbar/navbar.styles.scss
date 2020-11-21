@@ -13,6 +13,13 @@ body {
 nav {
   background-color: #2697ED;
 
+  img, li {
+    &:hover {
+      filter: invert(10%);
+      cursor: pointer;
+    }
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -31,11 +38,6 @@ nav {
     list-style: none;
     padding: 1rem;
     font-weight: 600;
-
-    &:hover {
-      background-color: transparent;
-      cursor: pointer;
-    }
   }
 
   .underline {
