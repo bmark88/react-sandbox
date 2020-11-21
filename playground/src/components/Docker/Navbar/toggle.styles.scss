@@ -1,0 +1,29 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100px;
+}
+
+.toggle-slider {
+  background-color: #c5e1f7;
+  width: 3rem;
+  border-radius: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.toggle-circle {
+  background-color: #2697ED;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  margin: 3px;
+}
+
+.active {
+  display: flex;
+  justify-content: flex-end;
+}
