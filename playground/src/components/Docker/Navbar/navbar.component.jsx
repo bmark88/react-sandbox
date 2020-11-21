@@ -8,7 +8,8 @@ import './navbar.styles.scss';
 const Navbar = () => {
   const [currentItem, setCurrentItem] = useState('');
   const [active, setActive] = useState(false);
-  const [theme, setTheme] = useState('day');
+
+  const theme = window.localStorage.getItem('theme');
   
   const listItems = ['Home', 'Guides', 'Product manuals', 'Reference', 'Articles'];
 
@@ -16,15 +17,14 @@ const Navbar = () => {
     if (e.target.id === 'dark-mode') {
       setActive(!active)
 
-      setTheme(theme === 'day' ? 'night' : 'day');
-      window.localStorage.setItem('theme', theme);
+      window.localStorage.setItem('theme', theme === 'day' ? 'night' : 'day');
     } else {
       setCurrentItem(e.target.innerText)
     }
   };
   
   return (
-    <nav>
+    <nav className={theme}>
       <div className='container'>
         <img src={companyLogo} alt='company-logo' />
         <ul className='nav-items-container'>
@@ -43,6 +43,7 @@ const Navbar = () => {
           id='dark-mode' 
           onClick={handleClick} 
           active={active}
+          theme={theme}
         />
       </div>
     </nav>

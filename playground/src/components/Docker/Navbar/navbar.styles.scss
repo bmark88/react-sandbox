@@ -11,6 +11,7 @@ body {
 }
 
 nav {
+  transition: all 500ms;
   background-color: #2697ED;
 
   img, li {
@@ -42,5 +43,14 @@ nav {
 
   .underline {
     border-bottom: solid 4px rgba(255,255,255,0.5);
+  }
+}
+
+.night {
+  transition: all 500ms;
+  background-color: #0f1c24;
+
+  .toggle-slider {
+    background-color: #344658;
   }
 }

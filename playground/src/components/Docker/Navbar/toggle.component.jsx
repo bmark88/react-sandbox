@@ -5,11 +5,11 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import './toggle.styles.scss';
 
 const Toggle = (props) => {
-  const { id, onClick, active } = props;
+  const { id, onClick, active, theme } = props;
   return (
     <div className='toggle'>
       <FontAwesomeIcon icon={faSun} style={{color: 'white'}} />
-      <div className={`${active ? 'active ' : ''}toggle-slider`} id={id} onClick={onClick}>
+      <div className={`${active ? 'active ' : ''}toggle-slider ${theme}`} id={id} onClick={onClick}>
         <div className='toggle-circle'/>
       </div>
       <FontAwesomeIcon icon={faMoon} style={{color: 'white'}} />
