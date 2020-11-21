@@ -1,0 +1,22 @@
+.card-link {
+  width: 32.2%;
+  margin: 0.4rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 5px -3.3px;
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 1rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    padding: 0.5rem 0;
+  }
+
+  &:hover {
+    transition: transform 200ms;
+    transform: scale(1.01)
+  }
+}
