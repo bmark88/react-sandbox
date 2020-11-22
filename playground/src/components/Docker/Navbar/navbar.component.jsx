@@ -5,18 +5,19 @@ import companyLogo from '../../../assets/images/docker-logo.svg';
 
 import './navbar.styles.scss';
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [currentItem, setCurrentItem] = useState('');
-  const [active, setActive] = useState(false);
+  // const [theme, setTheme] = useState(window.localStorage.getItem('theme'));
+  const { setTheme, theme } = props;
 
-  const theme = window.localStorage.getItem('theme');
-  
   const listItems = ['Home', 'Guides', 'Product manuals', 'Reference', 'Articles'];
+
+  // On initial render, add or remove 'night' class to body depending on localStorage theme
+  theme === 'day' ? document.body.classList.remove('night') : document.body.classList.add('night') 
 
   const handleClick = (e) => {
     if (e.target.id === 'dark-mode') {
-      setActive(!active)
-
+      setTheme(theme === 'day' ? 'night' : 'day')
       window.localStorage.setItem('theme', theme === 'day' ? 'night' : 'day');
     } else {
       setCurrentItem(e.target.innerText)
@@ -42,7 +43,6 @@ const Navbar = () => {
         <Toggle 
           id='dark-mode' 
           onClick={handleClick} 
-          active={active}
           theme={theme}
         />
       </div>

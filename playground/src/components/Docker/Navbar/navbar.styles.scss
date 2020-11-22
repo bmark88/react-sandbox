@@ -46,8 +46,7 @@ nav {
   }
 }
 
-.night {
-  transition: all 500ms;
+nav.night {
   background-color: #0f1c24;
 
   .toggle-slider {

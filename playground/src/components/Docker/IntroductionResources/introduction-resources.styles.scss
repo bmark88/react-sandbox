@@ -44,6 +44,11 @@
   .how-do-i, .popular-videos {
     background-color: #F2F3F5;
     margin: 0.4rem;
+    transition: background-color 500ms, color 200ms;
+
+    &.night {
+      background-color: #0e161b;
+    }
   }
 
   .how-do-i {

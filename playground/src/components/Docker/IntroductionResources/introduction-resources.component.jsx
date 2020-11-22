@@ -8,7 +8,9 @@ import video from '../../../assets/images/video.svg';
 
 import { introResources, howDoI, popularVideos } from '../CardLink/card-link-data';
 
-const IntroductionResources = () => {
+const IntroductionResources = (props) => {
+  const { theme } = props;
+  
   // HowDoI list items
   const listOne = Object.entries(howDoI.list1);
   const listTwo = Object.entries(howDoI.list2);
@@ -16,7 +18,7 @@ const IntroductionResources = () => {
   const videoData = Object.entries(popularVideos.list);
 
   return (
-    <section className='introduction-resources container'>
+    <section className={`introduction-resources container ${theme}`}>
       <div className='search'>
         <form>
           <label htmlFor='search-bar'>
@@ -26,10 +28,10 @@ const IntroductionResources = () => {
         </form>
       </div>
       <div className='links-1'>
-        { introResources.map((item) => <CardLink key={item.id} {...item} />) }
+        { introResources.map((item) => <CardLink key={item.id} {...item} theme={theme} />) }
       </div>
       <div className='links-2'>
-        <div className='how-do-i'>
+        <div className={`how-do-i ${theme}`}>
           <div className='header'>
             <h3>How do I?</h3>
             <p>
@@ -45,7 +47,7 @@ const IntroductionResources = () => {
             </ul>
           </div>
         </div>
-        <div className='popular-videos'>
+        <div className={`popular-videos ${theme}`}>
           <div className='header'>
             <h3>Popular videos</h3>
             <p>Watch the most popular videos from DockerCon.</p>
