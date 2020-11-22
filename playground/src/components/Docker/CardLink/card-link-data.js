@@ -44,4 +44,31 @@ const introResources = [
   }
 ];
 
-export { introResources };
+const howDoI = {
+  list1: {
+    7: 'Write a Dockerfile',
+    8: 'Write a Docker Compose file', 
+    9: 'Share my image on Docker Hub', 
+    10: 'Build and run an image', 
+    11: 'Use multi-stage builds', 
+    12: 'Run a command in a container',
+  },
+  list2: {
+    13: 'Manage container networking',
+    14: 'Work with volumes and bind mounts',
+    15: 'Configure the Docker daemon',
+    16: 'Manage Docker objects',
+    17: 'Scale apps using Kubernetes',
+    18: 'Scale apps using Swarm'
+  }
+};
+
+const popularVideos = {
+  list: {
+    19: 'How to get started with Docker',
+    20: 'How to build and test your Docker images in the Cloud',
+    21: 'Simplify all the things with Docker Compose'
+  }
+};
+
+export { introResources, howDoI, popularVideos };

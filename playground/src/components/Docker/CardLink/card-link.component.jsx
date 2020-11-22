@@ -7,7 +7,7 @@ const CardLink = (props) => {
 
   return (
     <div key={id} className='card-link'>
-      <img src={imgUrl} />
+      <img src={imgUrl} alt={title}/>
       <h3>{title}</h3>
       <p>{description}</p>
     </div>
