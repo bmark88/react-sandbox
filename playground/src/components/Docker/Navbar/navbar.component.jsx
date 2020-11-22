@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+
 import NavBarListItem from './navbar-list-item.component';
 import Toggle from './toggle.component';
+import HamburgerMenu from './hamburger-menu.component';
+
 import companyLogo from '../../../assets/images/docker-logo.svg';
 
 import './navbar.styles.scss';
 
 const Navbar = (props) => {
   const [currentItem, setCurrentItem] = useState('');
-  // const [theme, setTheme] = useState(window.localStorage.getItem('theme'));
   const { setTheme, theme } = props;
 
   const listItems = ['Home', 'Guides', 'Product manuals', 'Reference', 'Articles'];

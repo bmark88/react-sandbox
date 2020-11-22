@@ -14,8 +14,19 @@ code {
 }
 
 .container {
-  width: 1170px;
   margin: 0 auto;
+
+  @media (min-width: 780px) {
+    width: 750px;
+  }
+
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
 }
 
 body.night {

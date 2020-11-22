@@ -29,11 +29,15 @@
 .links-1 {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2.5rem;
+  justify-content: space-between;
+  margin: 2.5rem 1rem;
+
+  @media (min-width: 750px) {
+    margin: 2.5rem 0;
+  }
 }
 
 .links-2 {
-  display: flex;
   margin-top: 2.5rem;
 
   ul {
@@ -42,8 +46,8 @@
   }
 
   .how-do-i, .popular-videos {
+    width: 100%;
     background-color: #F2F3F5;
-    margin: 0.4rem;
     transition: background-color 500ms, color 200ms;
 
     &.night {
@@ -52,12 +56,9 @@
   }
 
   .how-do-i {
-    width: 66.66%;
     padding: 1.9rem;
 
     .header {
-      width: 66.66%;
-
       h3 {
         margin-bottom: 0.7rem;
         font-size: 1.25rem;
@@ -87,7 +88,7 @@
   }
 
   .popular-videos {
-    width: 33.33%;
+    margin-top: 1rem;
     padding: 2rem 2.4rem;
   }
 
@@ -104,6 +105,24 @@
     &:hover {
       color: #23527c;
       opacity: 80%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+
+    .how-do-i {
+      width: 66%;
+
+      .header { 
+        width: 66.66%;
+      }
+    }
+
+    .popular-videos {
+      margin-top: 0;
+      width: 33.3%;
     }
   }
 }
