@@ -8,7 +8,7 @@
   }
 
   input {
-    width: 50%;
+    width: 90%;
     padding: 0.8rem;
     font-size: 1.1rem;
     transition: all 150ms;
@@ -22,6 +22,10 @@
 
     &::placeholder {
       color: #B0B0B0;
+    }
+
+    @media (min-width: 778px) {
+      width: 525px;
     }
   }
 }
@@ -39,11 +43,6 @@
 
 .links-2 {
   margin-top: 2.5rem;
-
-  ul {
-    list-style: none;;
-    cursor: pointer;
-  }
 
   .how-do-i, .popular-videos {
     width: 100%;

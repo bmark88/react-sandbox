@@ -18,11 +18,13 @@ const Navbar = (props) => {
   theme === 'day' ? document.body.classList.remove('night') : document.body.classList.add('night') 
 
   const handleClick = (e) => {
-    if (e.target.id === 'dark-mode') {
-      setTheme(theme === 'day' ? 'night' : 'day')
-      window.localStorage.setItem('theme', theme === 'day' ? 'night' : 'day');
-    } else {
-      setCurrentItem(e.target.innerText)
+    const classes = e.target.className.split(' ')
+
+    if (classes.includes('toggle-slider') || classes.includes('toggle-circle')) {
+        window.localStorage.setItem('theme', theme === 'day' ? 'night' : 'day')
+        setTheme(theme === 'day' ? 'night' : 'day');
+      } else {
+          setCurrentItem(e.target.innerText)
     }
   };
   
@@ -34,8 +36,8 @@ const Navbar = (props) => {
           {
             listItems.map(item => (
               <NavBarListItem 
-                key={item}
-                itemName={item} 
+              key={item}
+              itemName={item} 
                 className={currentItem === item ? 'underline' : ''}
                 onClick={handleClick}
               />
@@ -43,8 +45,14 @@ const Navbar = (props) => {
           }
         </ul>
         <Toggle 
-          id='dark-mode' 
+          className='dark-mode' 
           onClick={handleClick} 
+          theme={theme}
+        />
+        <HamburgerMenu 
+          id='hamburger-toggle'
+          items={listItems} 
+          setTheme={setTheme} 
           theme={theme}
         />
       </div>

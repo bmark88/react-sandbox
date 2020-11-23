@@ -29,6 +29,11 @@ code {
   }
 }
 
+ul {
+  list-style: none;;
+  cursor: pointer;
+}
+
 body.night {
   background-color: #031f30;
   color: #FFFFFF;

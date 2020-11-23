@@ -1,8 +1,13 @@
 .toggle {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-evenly;
   width: 100px;
+  transition: all 500ms;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .toggle-slider {

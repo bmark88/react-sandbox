@@ -1,0 +1,30 @@
+.hamburger-menu {
+  width: 5.44rem;
+  height: 19px;
+  padding: 1.72rem;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  transition: all 2s;
+
+  &:focus {
+    outline: none;
+  }
+
+  .bar {
+    width: 100%;
+    border: solid 1px white;
+  }
+
+  .top {
+    transform: translateY(-5px);
+  }
+
+  .bottom {
+    transform: translateY(5px);
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}

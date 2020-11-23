@@ -14,6 +14,12 @@ nav {
   transition: all 500ms;
   background-color: #2697ED;
   width: 100%;
+  height: 100px;
+
+  img {
+    padding: 1rem;
+    top: 0;
+  }
 
   img, li {
     &:hover {
@@ -27,10 +33,15 @@ nav {
     justify-content: space-between;
     align-items: center;
   }
+
+  @media (min-width: 668px) {
+    height: 60px;
+    transition: height 500ms;
+  }
 }
 
 .nav-items-container {
-  display: flex;
+  display: none;
   height: 55px;
   align-items: center;
 
@@ -40,10 +51,15 @@ nav {
     list-style: none;
     padding: 1rem;
     font-weight: 600;
+    white-space: nowrap;
   }
 
   .underline {
     border-bottom: solid 4px rgba(255,255,255,0.5);
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
   }
 }
 
