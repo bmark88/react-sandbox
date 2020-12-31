@@ -14,7 +14,6 @@ nav {
   transition: all 500ms;
   background-color: #2697ED;
   width: 100%;
-  height: 100px;
 
   img {
     padding: 1rem;
@@ -32,11 +31,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  @media (min-width: 668px) {
-    height: 60px;
-    transition: height 500ms;
   }
 }
 
