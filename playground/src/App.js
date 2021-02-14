@@ -20,11 +20,11 @@ function App() {
   return (
     <>
       <Switch>
-        <Route path='/docker' render={() => <Docker />}/>
-        <Route exact path='/' render={() => <h1>Welcome To Bradley's React Sandbox</h1>} />
+        <Route exact path='/react-sandbox' render={() => <h1>Welcome To Bradley's React Sandbox</h1>} />
+        <Route path='/react-sandbox/docker' render={() => <Docker />}/>
         {/* <Route path='/to-do-list' render={() => <ToDo />} /> */}
-        <Route path='/login' render={() => <SignIn />}/>
-        <Route path='/register' render={() => <Register />}/>
+        <Route path='/react-sandbox/login' render={() => <SignIn />}/>
+        <Route path='/react-sandbox/register' render={() => <Register />}/>
       {/* {
         user && 
         <>
